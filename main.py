@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 #  Ez azért kell, mert így elfogadja az ékezetet. UTF-8-as betűkódolásra váltottunk
 
+# additional comments
+
 from math import *
 # TASK: quadratic formula solver
 
