@@ -24,11 +24,11 @@ from math import *
 # Result: equation can not be solved
 
 def main():
-    print 'ax^2 + bx + c = 0'
+    print('ax^2 + bx + c = 0')
     a = szam_beker("a")
     # ha a nem nagyobb mint 0, akkor nincs értelme
     if a == 0:
-        print "Ez nem másodfokú egyenlet!"
+        print("Ez nem másodfokú egyenlet!")
         return
     # a értékhez előjel kiíratás
     elif a < 0:
@@ -49,26 +49,26 @@ def main():
         s_c = "+ {}".format(c)
 
     # az egyenlet kiíratásánál figyelni kell az előjelre
-    raw_input("Equation: {}x^2 {}x {} = 0. Press ENTER to start".format(s_a,s_b,s_c))
+    input("Equation: {}x^2 {}x {} = 0. Press ENTER to start".format(s_a,s_b,s_c))
 
     det = determinans(a,b,c)
     if det < 0:
         # ha nincs megoldása az egyenletnek, ki is lépünk
-        print "Result: equation can not be solved"
+        print("Result: equation can not be solved")1
         return # kilépés
     elif det == 0:
         # ha csak egy megoldása van
         x = - b / (2 * a)
-        print "Result: x = {}".format(x)
+        print("Result: x = {}".format(x))
     else:
         # ha két megoldása van
         x_1 = (-b + sqrt(det)) / (2 * a)
         x_2 = (-b - sqrt(det)) / (2 * a)
-        print "Result: x_1 = {}; x_2 = {};".format(x_1, x_2)
+        print("Result: x_1 = {}; x_2 = {};".format(x_1, x_2))
     return
 
 def szam_beker(betu):
-    return int(raw_input("{} = ".format(betu)))
+    return int(input("{} = ".format(betu)))
 
 def determinans(a,b,c):
     return b * b - 4 * a * c
